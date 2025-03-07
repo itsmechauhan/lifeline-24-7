@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Accident_activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/enter_emergency_details"
+        android:textSize="26sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="monospace"
+        android:layout_marginStart="5dp"
+        />
+
+
+
+<!-- Accident Date -->
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/date_input_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="32dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/accident_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Accident Date"
+        android:inputType="date"
+        android:focusable="false" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<!-- Location (Geocoded address will be shown here) -->
+<TextView
+    android:id="@+id/location_text_view"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Location (Fetching...)"
+    android:textSize="16sp"
+    app:layout_constraintTop_toBottomOf="@id/date_input_layout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="16dp" />
+
+<!-- Location (Input for custom location) -->
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/location_input_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/location_text_view"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="16dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location (Optional)"
+        android:inputType="text" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<!-- Accident Description -->
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/description_input_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/location_input_layout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="16dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType="textMultiLine" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<!-- Attach Photo Button -->
+<Button
+    android:id="@+id/attach_photo_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Attach Photo (Optional)"
+    app:layout_constraintTop_toBottomOf="@id/description_input_layout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="16dp" />
+
+<!-- Submit Button -->
+<Button
+    android:id="@+id/submit_button"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Submit Report"
+    app:layout_constraintTop_toBottomOf="@id/attach_photo_button"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

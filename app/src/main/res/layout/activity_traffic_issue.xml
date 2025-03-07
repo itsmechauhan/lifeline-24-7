@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <!-- activity_fire_report.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/main"
+android:orientation="vertical"
+android:padding="16dp">
+
+<!-- Title Text -->
+<TextView
+    android:id="@+id/reportTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/traffic_issue"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:layout_marginBottom="20dp" />
+
+<!-- Description Field -->
+<EditText
+    android:id="@+id/editDescription"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/describe_the_traffic_issue"
+    android:inputType="textMultiLine"
+    android:lines="3"
+    android:layout_marginBottom="16dp" />
+
+<!-- Location Field -->
+<EditText
+    android:id="@+id/editLocation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/enter_location"
+    android:inputType="text"
+    android:layout_marginBottom="16dp" />
+
+
+<!-- Submit Report Button -->
+<Button
+    android:id="@+id/submitReportButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/submit_report" />
+</LinearLayout>

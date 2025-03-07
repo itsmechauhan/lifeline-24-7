@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="#9704E2FF"
+
+    tools:context=".Main_page">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="@string/lifeline_24_7"
+        android:textColor="#DD4242"
+
+        android:textSize="28sp"
+
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="14dp"
+ />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="110dp"
+
+        android:layout_height="110dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="19dp"
+        app:cardElevation="12dp" >
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/accident_btn"
+            android:contentDescription="@string/image_logo"
+            android:src="@drawable/accidentlogo"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+
+        android:layout_below="@+id/textView"
+
+
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="51dp"
+
+        android:layout_toEndOf="@+id/cardView"
+        android:elevation="8dp"
+        app:cardCornerRadius="19dp"
+        app:cardElevation="12dp" >
+        <ImageView
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/fire_img"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cardView"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="56dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="19dp"
+        app:cardElevation="12dp" >
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Ambulance"
+            android:src="@drawable/traffic"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cardView2"
+
+        android:layout_marginStart="63dp"
+
+        android:layout_marginTop="62dp"
+
+        android:layout_toEndOf="@+id/cardView"
+        android:elevation="8dp"
+        app:cardCornerRadius="19dp"
+        app:cardElevation="12dp" >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/account_circle"
+            android:id="@+id/myinfo"
+
+            />
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
